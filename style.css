@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #e3f2fd; /* Bleu très clair */
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #3f51b5, #5c6bc0); /* Dégradé de couleur */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre du header */
+}
+
+nav {
+    display: flex; /* Utilisation du flexbox */
+    justify-content: space-between; /* Espace entre le logo et le menu */
+    align-items: center; /* Centrage vertical */
+    max-width: 1200px; /* Largeur maximale de la navbar */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 0 1rem; /* Espacement latéral */
+}
+
+.logo-image {
+    height: 50px; /* Hauteur du logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Espacement entre les éléments de la liste */
+}
+
+nav ul li a {
+    color: #ffffff; /* Couleur des liens */
+    text-decoration: none;
+    font-weight: 500; /* Poids de la police */
+    transition: color 0.3s, transform 0.3s; /* Transition pour le survol */
+}
+
+nav ul li a:hover {
+    color: #ffeb3b; /* Jaune au survol */
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+
+section {
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1rem; /* Ajout d'un espacement entre les sections */
+}
+
+.gif-container {
+    position: relative; /* Position relative pour le conteneur GIF */
+}
+
+.gif-image {
+    width: 100%; /* Largeur de l'image à 100% du conteneur */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+}
+
+.btn {
+    background-color: #3f51b5; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 0.5rem 1rem;
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondir les bords du bouton */
+    cursor: pointer; /* Changer le curseur sur hover */
+    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une transition */
+    text-decoration: none; /* Supprime le soulignement pour les liens */
+}
+
+.btn:hover {
+    background-color: #303f9f; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+#bts-sio {
+    padding: 2rem; /* Espacement intérieur pour la section */
+    background-color: #f9f9f9; /* Fond gris clair */
+    border-radius: 10px; /* Coins arrondis pour la section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+    margin-top: 2rem; /* Espacement au-dessus de la section */
+}
+
+.bts-container {
+    display: flex; /* Utilise flexbox pour la mise en page */
+    justify-content: center; /* Centre les éléments horizontalement */
+    align-items: flex-start; /* Aligne les éléments en haut */
+    max-width: 1200px; /* Largeur maximale pour la description */
+    margin: 0 auto; /* Centre la section horizontalement */
+}
+
+.bts-description {
+    flex: 1; /* Prend toute la place disponible */
+    margin-right: 2rem; /* Espacement à droite pour séparer l'image */
+    text-align: center; /* Centre le texte */
+}
+
+.bts-description h2 {
+    color: #3f51b5; /* Couleur pour le titre principal */
+    text-align: left; /* Aligne le titre à gauche */
+    font-size: 2rem; /* Taille de police pour le titre */
+}
+
+.bts-description h3 {
+    color: #333; /* Couleur pour les sous-titres */
+    margin-top: 1.5rem; /* Espacement au-dessus des sous-titres */
+}
+
+.bts-description p, 
+.bts-description ul {
+    line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
+    margin: 1rem 0; /* Marges pour les paragraphes et listes */
+    font-size: 1.1rem; /* Taille de police standard, légèrement agrandie */
+}
+
+.bts-description ul {
+    list-style-type: disc; /* Utilise des puces pour les listes */
+    padding-left: 20px; /* Espacement à gauche pour les listes */
+}
+
+.bts-description li {
+    margin-bottom: 0.5rem; /* Espacement entre les éléments de la liste */
+}
+
+.options-container {
+    display: flex; /* Utilise flexbox pour les options */
+    justify-content: space-around; /* Espace entre les options pour les centrer */
+    margin-top: 1rem; /* Espacement au-dessus des options */
+}
+
+.option {
+    flex: 1; /* Chaque option prend une place égale */
+    margin: 0 1rem; /* Marges à gauche et à droite pour séparer les options */
+    text-align: center; /* Centre le texte dans chaque option */
+}
+
+.option h4 {
+    font-size: 1.5rem; /* Taille de police pour les titres des options, agrandie */
+}
+
+
+.welcome-text {
+    position: absolute; /* Position absolue pour superposer le texte */
+    top: 50%; /* Placer verticalement au milieu */
+    left: 50%; /* Placer horizontalement au milieu */
+    transform: translate(-50%, -50%); /* Centrer le texte */
+    color: #ffffff; /* Couleur du texte en blanc */
+    font-size: 2.5rem; /* Ajustez la taille de la police si nécessaire */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+}
+
+.profil-container {
+    display: flex; /* Utilise le flexbox pour la mise en page */
+    align-items: center; /* Aligne verticalement les éléments au centre */
+    justify-content: space-between; /* Espace entre la description et l'image */
+    margin-top: 1rem; /* Ajout d'un espacement au-dessus */
+    padding: 2rem; /* Espacement intérieur pour le bloc */
+    background-color: #ffffff; /* Fond blanc pour le bloc */
+    border-radius: 10px; /* Coins arrondis pour le bloc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+}
+
+.profil-description {
+    flex: 1; /* Laisse la description occuper l'espace restant */
+    max-width: 600px; /* Largeur maximale pour éviter d'étirer trop */
+    text-align: left; /* Alignement du texte à gauche */
+    margin-right: 2rem; /* Espacement à droite de la description */
+}
+
+.profile-image-container {
+    display: flex; /* Utilise flexbox pour centrer l'image */
+    justify-content: center; /* Centre l'image horizontalement */
+    flex: 0 0 250px; /* Fixe la largeur de la colonne d'image */
+}
+
+.profile-image-container {
+    display: flex; /* Utilise flexbox pour centrer l'image */
+    justify-content: center; /* Centre l'image horizontalement */
+    flex: 0 0 350px; /* Fixe la largeur de la colonne d'image */
+}
+
+.profile-image {
+    width: 350px; /* Augmenté à 350px */
+    height: 350px; /* Augmenté à 350px */
+    border-radius: 50%; /* Arrondir l'image pour un effet de cercle */
+    object-fit: cover; /* S'assure que l'image s'adapte sans déformer */
+    border: 5px solid #3f51b5; /* Ajoute une bordure autour de l'image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre autour de l'image */
+}
+
+.profil-description h2 {
+    text-align: center; /* Centre le texte */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 1rem 0; /* Ajoute un peu d'espacement autour du titre */
+}
+
+
+
+.experience-list {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0;
+}
+
+.experience-list li {
+    margin: 0.5rem 0; /* Espacement entre les éléments de la liste */
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center; /* Centrer les compétences */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+    margin-top: 1rem;
+}
+
+.skill {
+    background-color: #4caf50; /* Vert pour les compétences */
+    color: #fff; /* Couleur du texte en blanc */
+    padding: 0.5rem 1rem; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    margin: 0.5rem; /* Espacement autour de chaque compétence */
+    transition: transform 0.3s; /* Animation de transformation */
+}
+
+.skill:hover {
+    transform: scale(1.1); /* Agrandir au survol */
+}
+
+
+.project-container {
+    display: flex; /* Utilise Flexbox pour la mise en page */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    justify-content: center; /* Centre les projets */
+}
+
+.project {
+    background-color: #ffffff; /* Fond blanc pour les projets */
+    border: 1px solid #ccc; /* Bordure grise pour chaque projet */
+    border-radius: 5px; /* Coins arrondis */
+    padding: 1rem; /* Espacement intérieur */
+    margin: 1rem; /* Espacement autour des projets */
+    width: calc(25% - 2rem); /* Largeur des projets avec marges */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    transition: transform 0.3s, box-shadow 0.3s; /* Ajout d'une transition */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.project-image {
+    width: 100%; /* Largeur de l'image du projet */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    border-radius: 5px; /* Coins arrondis */
+}
+
+.contact-section {
+    background-color: #f9f9f9; /* Fond gris clair pour la section contact */
+    padding: 2rem;
+    border-radius: 5px;
+    margin-top: 1rem; /* Ajout d'un espacement en haut */
+}
+
+.form-group {
+    margin: 1rem 0; /* Espacement entre les groupes de champs */
+}
+
+.btn {
+    background-color: #3f51b5; /* Couleur du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 0.5rem 1rem;
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondir les bords du bouton */
+    cursor: pointer; /* Changer le curseur sur hover */
+    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une transition */
+}
+
+.btn:hover {
+    background-color: #303f9f; /* Couleur plus foncée au survol */
+    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+}
+
+footer {
+    background-color: #3f51b5; /* Couleur du pied de page */
+    color: #fff; /* Texte en blanc */
+    text-align: center;
+    padding: 1rem 0; /* Espacement intérieur */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animation fade-in */
+.fade-in {
+    animation: fadeIn 1s ease forwards; /* Animation d'apparition */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Début de l'animation */
+    }
+    to {
+        opacity: 1; /* Fin de l'animation */
+    }
+}
+
+.link-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.link-block {
+    display: inline-block;
+    text-decoration: none; /* Supprime le soulignement du lien */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.link-block:hover {
+    transform: scale(1.05); /* Agrandissement léger au survol */
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 150px; /* Largeur réduite du bloc */
+    height: 150px; /* Hauteur réduite du bloc */
+    overflow: hidden; /* Masque le contenu excédentaire */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour du bloc */
+}
+
+.image-link {
+    width: 100%; /* L'image occupe 100% de la largeur du bloc */
+    height: 100%; /* L'image occupe 100% de la hauteur du bloc */
+    object-fit: cover; /* Ajuste l'image sans déformer */
+    transition: opacity 0.3s ease;
+}
+
+.image-link:hover {
+    opacity: 0.8; /* Effet de transparence au survol */
+}
+
+.link-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem; /* Taille de police réduite */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent */
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.link-block:hover .link-text {
+    visibility: visible; /* Affiche le texte au survol */
+}

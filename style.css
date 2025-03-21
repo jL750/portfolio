@@ -7,293 +7,336 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #e3f2fd; /* Bleu très clair */
+    background-color: #e3f2fd;
     color: #333;
 }
 
 header {
-    background: linear-gradient(135deg, #3f51b5, #5c6bc0); /* Dégradé de couleur */
+    background: linear-gradient(135deg, #3f51b5, #5c6bc0);
     color: #fff;
     padding: 1rem 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre du header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav {
-    display: flex; /* Utilisation du flexbox */
-    justify-content: space-between; /* Espace entre le logo et le menu */
-    align-items: center; /* Centrage vertical */
-    max-width: 1200px; /* Largeur maximale de la navbar */
-    margin: 0 auto; /* Centrage horizontal */
-    padding: 0 1rem; /* Espacement latéral */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .logo-image {
-    height: 50px; /* Hauteur du logo */
+    height: 50px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 2rem; /* Espacement entre les éléments de la liste */
+    gap: 2rem;
 }
 
 nav ul li a {
-    color: #ffffff; /* Couleur des liens */
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500; /* Poids de la police */
-    transition: color 0.3s, transform 0.3s; /* Transition pour le survol */
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffeb3b; /* Jaune au survol */
-    transform: scale(1.1); /* Agrandissement au survol */
+    color: #ffeb3b;
+    transform: scale(1.1);
 }
-
 
 section {
     padding: 2rem;
     text-align: center;
-    margin-top: 1rem; /* Ajout d'un espacement entre les sections */
+    margin-top: 1rem;
 }
 
 .gif-container {
-    position: relative; /* Position relative pour le conteneur GIF */
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Hauteur de la section égale à la hauteur de l'écran */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .gif-image {
-    width: 100%; /* Largeur de l'image à 100% du conteneur */
-    height: auto; /* Hauteur automatique pour garder les proportions */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.btn {
-    background-color: #3f51b5; /* Couleur du bouton */
-    color: #fff; /* Couleur du texte du bouton */
+.welcome-content {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.welcome-description {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 2rem;
+}
+
+.btn-accueil {
+    background-color: #3f51b5;
+    color: #fff;
     padding: 0.5rem 1rem;
-    border: none; /* Supprime la bordure */
-    border-radius: 5px; /* Arrondir les bords du bouton */
-    cursor: pointer; /* Changer le curseur sur hover */
-    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une transition */
-    text-decoration: none; /* Supprime le soulignement pour les liens */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
 }
 
-.btn:hover {
-    background-color: #303f9f; /* Couleur plus foncée au survol */
-    transform: scale(1.05); /* Légère augmentation de la taille au survol */
-}
-
-#bts-sio {
-    padding: 2rem; /* Espacement intérieur pour la section */
-    background-color: #f9f9f9; /* Fond gris clair */
-    border-radius: 10px; /* Coins arrondis pour la section */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
-    margin-top: 2rem; /* Espacement au-dessus de la section */
+.btn-accueil:hover {
+    background-color: #303f9f;
+    transform: scale(1.05);
 }
 
 .bts-container {
-    display: flex; /* Utilise flexbox pour la mise en page */
-    justify-content: center; /* Centre les éléments horizontalement */
-    align-items: flex-start; /* Aligne les éléments en haut */
-    max-width: 1200px; /* Largeur maximale pour la description */
-    margin: 0 auto; /* Centre la section horizontalement */
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+   
 }
 
+
 .bts-description {
-    flex: 1; /* Prend toute la place disponible */
-    margin-right: 2rem; /* Espacement à droite pour séparer l'image */
-    text-align: center; /* Centre le texte */
+    text-align: left;
 }
 
 .bts-description h2 {
-    color: #3f51b5; /* Couleur pour le titre principal */
-    text-align: left; /* Aligne le titre à gauche */
-    font-size: 2rem; /* Taille de police pour le titre */
+    color: #3f51b5;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .bts-description h3 {
-    color: #333; /* Couleur pour les sous-titres */
-    margin-top: 1.5rem; /* Espacement au-dessus des sous-titres */
+    color: #333;
+    margin-top: 1.5rem;
 }
 
 .bts-description p, 
 .bts-description ul {
-    line-height: 1.6; /* Augmente l'interligne pour une meilleure lisibilité */
-    margin: 1rem 0; /* Marges pour les paragraphes et listes */
-    font-size: 1.1rem; /* Taille de police standard, légèrement agrandie */
+    line-height: 1.6;
+    margin: 1rem 0;
+    font-size: 1.1rem;
 }
 
 .bts-description ul {
-    list-style-type: disc; /* Utilise des puces pour les listes */
-    padding-left: 20px; /* Espacement à gauche pour les listes */
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 .bts-description li {
-    margin-bottom: 0.5rem; /* Espacement entre les éléments de la liste */
+    margin-bottom: 0.5rem;
 }
 
 .options-container {
-    display: flex; /* Utilise flexbox pour les options */
-    justify-content: space-around; /* Espace entre les options pour les centrer */
-    margin-top: 1rem; /* Espacement au-dessus des options */
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
 }
 
 .option {
-    flex: 1; /* Chaque option prend une place égale */
-    margin: 0 1rem; /* Marges à gauche et à droite pour séparer les options */
-    text-align: center; /* Centre le texte dans chaque option */
+    flex: 1;
+    margin: 0 1rem;
+    text-align: center;
 }
 
 .option h4 {
-    font-size: 1.5rem; /* Taille de police pour les titres des options, agrandie */
-}
-
-
-.welcome-text {
-    position: absolute; /* Position absolue pour superposer le texte */
-    top: 50%; /* Placer verticalement au milieu */
-    left: 50%; /* Placer horizontalement au milieu */
-    transform: translate(-50%, -50%); /* Centrer le texte */
-    color: #ffffff; /* Couleur du texte en blanc */
-    font-size: 2.5rem; /* Ajustez la taille de la police si nécessaire */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    font-size: 1.5rem;
 }
 
 .profil-container {
-    display: flex; /* Utilise le flexbox pour la mise en page */
-    align-items: center; /* Aligne verticalement les éléments au centre */
-    justify-content: space-between; /* Espace entre la description et l'image */
-    margin-top: 1rem; /* Ajout d'un espacement au-dessus */
-    padding: 2rem; /* Espacement intérieur pour le bloc */
-    background-color: #ffffff; /* Fond blanc pour le bloc */
-    border-radius: 10px; /* Coins arrondis pour le bloc */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profil-description {
-    flex: 1; /* Laisse la description occuper l'espace restant */
-    max-width: 600px; /* Largeur maximale pour éviter d'étirer trop */
-    text-align: left; /* Alignement du texte à gauche */
-    margin-right: 2rem; /* Espacement à droite de la description */
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    margin-right: 2rem;
 }
 
 .profile-image-container {
-    display: flex; /* Utilise flexbox pour centrer l'image */
-    justify-content: center; /* Centre l'image horizontalement */
-    flex: 0 0 250px; /* Fixe la largeur de la colonne d'image */
-}
-
-.profile-image-container {
-    display: flex; /* Utilise flexbox pour centrer l'image */
-    justify-content: center; /* Centre l'image horizontalement */
-    flex: 0 0 350px; /* Fixe la largeur de la colonne d'image */
+    display: flex;
+    justify-content: center;
+    flex: 0 0 350px;
 }
 
 .profile-image {
-    width: 350px; /* Augmenté à 350px */
-    height: 350px; /* Augmenté à 350px */
-    border-radius: 50%; /* Arrondir l'image pour un effet de cercle */
-    object-fit: cover; /* S'assure que l'image s'adapte sans déformer */
-    border: 5px solid #3f51b5; /* Ajoute une bordure autour de l'image */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Légère ombre autour de l'image */
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3f51b5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.profil-description h2 {
-    text-align: center; /* Centre le texte */
-    margin: 0; /* Supprime les marges par défaut */
-    padding: 1rem 0; /* Ajoute un peu d'espacement autour du titre */
-}
-
-
 
 .experience-list {
-    list-style-type: none; /* Supprime les puces de la liste */
+    list-style-type: none;
     padding: 0;
 }
 
 .experience-list li {
-    margin: 0.5rem 0; /* Espacement entre les éléments de la liste */
+    margin: 0.5rem 0;
+}
+
+/* Styles modernes et ergonomiques pour la section Compétences */
+
+#skills {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
 }
 
 .skills-container {
     display: flex;
-    justify-content: center; /* Centrer les compétences */
-    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
-    margin-top: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .skill {
-    background-color: #4caf50; /* Vert pour les compétences */
-    color: #fff; /* Couleur du texte en blanc */
-    padding: 0.5rem 1rem; /* Espacement intérieur */
-    border-radius: 5px; /* Coins arrondis */
-    margin: 0.5rem; /* Espacement autour de chaque compétence */
-    transition: transform 0.3s; /* Animation de transformation */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 140px;
 }
 
 .skill:hover {
-    transform: scale(1.1); /* Agrandir au survol */
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.skill-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 
+.skill span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .project-container {
-    display: flex; /* Utilise Flexbox pour la mise en page */
-    flex-wrap: wrap; /* Permet le retour à la ligne */
-    justify-content: center; /* Centre les projets */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .project {
-    background-color: #ffffff; /* Fond blanc pour les projets */
-    border: 1px solid #ccc; /* Bordure grise pour chaque projet */
-    border-radius: 5px; /* Coins arrondis */
-    padding: 1rem; /* Espacement intérieur */
-    margin: 1rem; /* Espacement autour des projets */
-    width: calc(25% - 2rem); /* Largeur des projets avec marges */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre douce */
-    transition: transform 0.3s, box-shadow 0.3s; /* Ajout d'une transition */
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    width: calc(25% - 2rem);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project:hover {
-    transform: translateY(-5px); /* Légère élévation au survol */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
-    width: 100%; /* Largeur de l'image du projet */
-    height: auto; /* Hauteur automatique pour garder les proportions */
-    border-radius: 5px; /* Coins arrondis */
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 .contact-section {
-    background-color: #f9f9f9; /* Fond gris clair pour la section contact */
+    background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 5px;
-    margin-top: 1rem; /* Ajout d'un espacement en haut */
+    margin-top: 1rem;
 }
 
 .form-group {
-    margin: 1rem 0; /* Espacement entre les groupes de champs */
+    margin: 1rem 0;
 }
 
 .btn {
-    background-color: #3f51b5; /* Couleur du bouton */
-    color: #fff; /* Couleur du texte du bouton */
+    background-color: #3f51b5;
+    color: #fff;
     padding: 0.5rem 1rem;
-    border: none; /* Supprime la bordure */
-    border-radius: 5px; /* Arrondir les bords du bouton */
-    cursor: pointer; /* Changer le curseur sur hover */
-    transition: background-color 0.3s, transform 0.3s; /* Ajout d'une transition */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #303f9f; /* Couleur plus foncée au survol */
-    transform: scale(1.05); /* Légère augmentation de la taille au survol */
+    background-color: #303f9f;
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: #3f51b5; /* Couleur du pied de page */
-    color: #fff; /* Texte en blanc */
+    background-color: #3f51b5;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0; /* Espacement intérieur */
+    padding: 1rem 0;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -301,52 +344,85 @@ footer {
 
 /* Animation fade-in */
 .fade-in {
-    animation: fadeIn 1s ease forwards; /* Animation d'apparition */
+    animation: fadeIn 1s ease forwards;
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Début de l'animation */
+        opacity: 0;
     }
     to {
-        opacity: 1; /* Fin de l'animation */
+        opacity: 1;
     }
 }
 
+/* Styles pour l'affichage de l'image dans la section Veille Technologique */
+
 .link-container {
-    margin-top: 2rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .link-block {
-    display: inline-block;
-    text-decoration: none; /* Supprime le soulignement du lien */
-    transition: transform 0.3s ease; /* Animation au survol */
-}
-
-.link-block:hover {
-    transform: scale(1.05); /* Agrandissement léger au survol */
+    text-decoration: none;
 }
 
 .image-container {
     position: relative;
-    display: inline-block;
-    width: 150px; /* Largeur réduite du bloc */
-    height: 150px; /* Hauteur réduite du bloc */
-    overflow: hidden; /* Masque le contenu excédentaire */
-    border-radius: 10px; /* Coins arrondis */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour du bloc */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .image-link {
-    width: 100%; /* L'image occupe 100% de la largeur du bloc */
-    height: 100%; /* L'image occupe 100% de la hauteur du bloc */
-    object-fit: cover; /* Ajuste l'image sans déformer */
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    border-radius: 20px;
+}
+
+.link-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.image-container:hover .link-text {
+    background: rgba(0, 0, 0, 0.9);
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-link {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: opacity 0.3s ease;
 }
 
 .image-link:hover {
-    opacity: 0.8; /* Effet de transparence au survol */
+    opacity: 0.8;
 }
 
 .link-text {

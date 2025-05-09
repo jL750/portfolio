@@ -293,7 +293,7 @@ ul li {
 .profil-description {
     flex: 1;
     margin-right: 30px;
-    max-width: 55%;
+    max-width: 60%;
 }
 
 .profil-description h2 {
